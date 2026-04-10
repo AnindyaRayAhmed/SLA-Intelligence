@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ app_name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI SLA Intelligence Dashboard</h1>
+      <p class="subtitle">Upload ticket data to evaluate SLA performance and receive operational recommendations.</p>
+    </header>
+
+    <section class="upload-card card">
+      <form id="uploadForm">
+        <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" required />
+        <button type="submit">Analyze Dataset</button>
+      </form>
+      <p id="statusMessage"></p>
+      <ul id="warningList"></ul>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="card kpi"><h3>Total Tickets</h3><p id="kpiTotal">-</p></div>
+      <div class="card kpi"><h3>SLA Compliance</h3><p id="kpiSla">-</p></div>
+      <div class="card kpi"><h3>Avg Resolution</h3><p id="kpiResolution">-</p></div>
+    </section>
+
+    <section class="charts-grid">
+      <div class="card chart-card"><h3>SLA Compliance</h3><canvas id="slaComplianceChart"></canvas></div>
+      <div class="card chart-card"><h3>SLA by Priority</h3><canvas id="slaPriorityChart"></canvas></div>
+      <div class="card chart-card"><h3>Agent Performance</h3><canvas id="agentPerformanceChart"></canvas></div>
+      <div class="card chart-card"><h3>Category Pareto</h3><canvas id="categoryParetoChart"></canvas></div>
+      <div class="card chart-card"><h3>Time Trend</h3><canvas id="timeTrendChart"></canvas></div>
+      <div class="card chart-card"><h3>Channel Performance</h3><canvas id="channelPerformanceChart"></canvas></div>
+    </section>
+
+    <section class="card insights-panel">
+      <h2>AI Insights</h2>
+      <div id="insightsContent">Upload data to generate insights.</div>
+    </section>
+
+    <section class="card table-panel">
+      <div class="table-controls">
+        <input id="searchInput" placeholder="Search tickets..." />
+        <select id="filterSelect">
+          <option value="all">All</option>
+          <option value="breached">Breached</option>
+          <option value="compliant">Compliant</option>
+        </select>
+      </div>
+      <div class="table-wrapper">
+        <table id="ticketTable">
+          <thead>
+            <tr>
+              <th>Ticket ID</th><th>Agent</th><th>Priority</th><th>Category</th><th>Channel</th>
+              <th>Status</th><th>First Response (min)</th><th>Resolution (min)</th><th>SLA</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

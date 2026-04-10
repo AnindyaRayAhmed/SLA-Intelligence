@@ -1,0 +1,5 @@
+{
+  "High": { "first_response_mins": 15, "resolution_mins": 120 },
+  "Medium": { "first_response_mins": 30, "resolution_mins": 240 },
+  "Low": { "first_response_mins": 60, "resolution_mins": 480 }
+}
