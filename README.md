@@ -51,19 +51,21 @@ Inside the project folder, open Command Prompt / Terminal.
 ```
 
 3. Install dependencies
-   ```
+```
 pip install -r requirements.txt
 ```
+
 4. Add your API key
 ```
 Open the .env file and replace:
-
 API_KEY=your_actual_key
 ```
+
 5. Start the app
 ```
 uvicorn backend.main:app --reload
 ```
+
 6. Open in browser
 ```
 Go to:
