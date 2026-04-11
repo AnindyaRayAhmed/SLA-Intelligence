@@ -11,6 +11,9 @@ Production-grade FastAPI + Pandas dashboard for SLA analytics from support ticke
 - AI-generated summaries and recommendations (structured, no raw data exposure)
 - Clean dashboard UI using Jinja2 + Chart.js
 
+__________________
+
+
 ## Project Structure
 ```
 backend/
@@ -29,6 +32,9 @@ frontend/
 requirements.txt
 ```
 
+________________________
+
+
 ## Required Input Columns
 - ticket_id
 - agent_name
@@ -39,6 +45,9 @@ requirements.txt
 - priority
 - category
 - channel
+
+_____________________________
+
 
 ## 🚀 How to Run (2–3 minutes setup)
 1. Download the project
@@ -73,7 +82,8 @@ Go to:
 👉 http://127.0.0.1:8000/
 ```
 
-____
+____________________
+
 
 # 📂 What you need to upload
 
@@ -104,6 +114,8 @@ Your file must include these columns:
 - Operations managers
 - Project tracking
 
+
+_____________________
 
 
 ## API
