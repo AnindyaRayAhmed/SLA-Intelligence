@@ -3,12 +3,13 @@
 Production-grade FastAPI + Pandas dashboard for SLA analytics from support ticket datasets.
 
 ## Features
-- CSV/Excel upload with strict schema validation.
-- Data cleaning pipeline with standardized fields and row-level resilience.
-- Dynamic SLA evaluation by priority from JSON config.
-- KPI, chart-ready aggregates, and searchable/filterable table output.
-- Deterministic insights generator based on structured summary only (no raw dataset exposure).
-- Server-rendered dashboard with Jinja2 + vanilla JS + Chart.js.
+- Upload CSV/Excel files with schema validation
+- Automated data cleaning and standardization
+- SLA evaluation based on configurable priority rules
+- KPI tracking and interactive visualizations
+- Agent, category, and channel-level performance insights
+- AI-generated summaries and recommendations (structured, no raw data exposure)
+- Clean dashboard UI using Jinja2 + Chart.js
 
 ## Project Structure
 ```
@@ -71,6 +72,39 @@ uvicorn backend.main:app --reload
 Go to:
 👉 http://127.0.0.1:8000/
 ```
+
+____
+
+# 📂 What you need to upload
+
+Your file must include these columns:
+
+ticket_id
+agent_name
+created_at
+first_response_at
+resolved_at
+status
+priority
+category
+channel
+
+
+# 📊 What the app does
+Calculates SLA performance
+Identifies delays and bottlenecks
+Compares agent performance
+Shows trends over time
+Generates AI-based insights and recommendations
+
+
+# 🧠 Example Use Cases
+Customer support teams
+BPO operations
+Operations managers
+Project tracking
+
+
 
 ## API
 ### `GET /`
