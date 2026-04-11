@@ -39,18 +39,36 @@ requirements.txt
 - category
 - channel
 
-## Run Locally
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+## 🚀 How to Run (2–3 minutes setup)
+1. Download the project
+```
+Click Code → Download ZIP and extract it.
+```
+
+2. Open terminal in the folder
+```
+Inside the project folder, open Command Prompt / Terminal.
+```
+
+3. Install dependencies
    ```
-2. Configure environment variables in `.env`.
-3. Start app:
-   ```bash
-   uvicorn backend.main:app --reload
-   ```
-4. Open:
-   - `http://127.0.0.1:8000/`
+pip install -r requirements.txt
+```
+4. Add your API key
+```
+Open the .env file and replace:
+
+API_KEY=your_actual_key
+```
+5. Start the app
+```
+uvicorn backend.main:app --reload
+```
+6. Open in browser
+```
+Go to:
+👉 http://127.0.0.1:8000/
+```
 
 ## API
 ### `GET /`
