@@ -79,30 +79,30 @@ ____
 
 Your file must include these columns:
 
-ticket_id
-agent_name
-created_at
-first_response_at
-resolved_at
-status
-priority
-category
-channel
+- ticket_id
+- agent_name
+- created_at
+- first_response_at
+- resolved_at
+- status
+- priority
+- category
+- channel
 
 
 # 📊 What the app does
-Calculates SLA performance
-Identifies delays and bottlenecks
-Compares agent performance
-Shows trends over time
-Generates AI-based insights and recommendations
+- Calculates SLA performance
+- Identifies delays and bottlenecks
+- Compares agent performance
+- Shows trends over time
+- Generates AI-based insights and recommendations
 
 
 # 🧠 Example Use Cases
-Customer support teams
-BPO operations
-Operations managers
-Project tracking
+- Customer support teams
+- BPO operations
+- Operations managers
+- Project tracking
 
 
 
